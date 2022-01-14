@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+
+    <body>
+        <div class="contenedor">
+            <form action="/" method="post">
+                <label for="">Producto:</label>
+                <select name="Productos" id="Productos">
+                    <option value="Computadora">Computadora</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Impresora">Impresora</option>
+                    <option value="Camara">Camara</option>
+                    <option value="Audifonos">Audifonos</option>
+                    <option value="USB">USB</option>
+                    <option value="Cable">Cable</option>
+                    <option value="Mouse">Mouse</option>
+                    <option value="Aire Comprimido">Aire Comprimido</option>
+                    <option value="Cerradura digital">Cerradura digital</option>
+                    <option value="Antena">Antena</option>
+                </select>
+                <br>
+                <br>
+                <label for="">Precio:</label>
+                <input type="number" name="Precios" id="Precios" placeholder="Precio">
+                <br>
+                <br>
+                <label for="">Cantidad de articulos:</label>
+                <input type="number" name="Cantidad" id="Cantidad" placeholder="Cantidad">
+                <br>
+                <br>
+                <button type="submit" id="Registro">Registrar</button>
+                
+                <a href="/Registro">Ver registro</a>
+            </form>
+
+            <div id="Resumen">
+                <div id="Titulo">
+                    <h2>Resumen</h2>
+                </div>
+
+                <div id="ProductoFinal">
+
+                    <div id="Area1">
+                        <p>Cantidad:</p>
+                        <p id="CantidadMostrada"></p>
+                    </div>
+
+                    <div id="Area2">
+                        <p>Productos:</p>
+                        <p id="ProductosMostrados"></p>
+                    </div>
+
+                    <div id="Area3">
+                        <p>Precios</p>
+                        <p id="PreciosMostrados"></p>
+                    </div>
+
+                </div>
+
+                <div id="TotalFinal">
+                    <p>Total</p>
+                    <p id="Pago"></p>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/js/java.js"></script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <div class="SegundoContenedor">
+            <h1 class="Registro">Productos Registrados</h1>
+
+            <% Productos.forEach(function(producto){ %>
+                <div class="Productos">
+                    <p class="p">Producto: <%= producto.Productos %></p>
+                    <p class="p">Precio: <%= producto.Precios %></p>
+                    <p class="p">Cantidad: <%= producto.Cantidad %></p>
+                    <br>
+                   <a class="Editar" href="/edit/<%= producto.id %>">Editar</a>
+
+                   <form action="/delete/<%= producto.id %>?_method=DELETE" method="post" id="form">
+                        <button type="submit" class="Borrar">Eliminar</button>
+                    </form>
+                </div>
+            <%})%>
+        </div>
+        <br>
+        <br>
+        <a class="Regresar" href="/">Regresar</a>
+    </body>
+</html>

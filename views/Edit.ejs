@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+
+    <body>
+        <div class="contenedor3">
+            <form class="form" action="/edit/<%= objeto.id %>?_method=PUT" method="post">
+                <label for="">Producto:</label>
+                <label name="Productos" id="Productos"><%= objeto.Productos %></label>
+                <br>
+                <br>
+                <label for="">Precio:</label>
+                <input type="number" name="Precios" id="Precios" placeholder="Precio" value="<%= objeto.Precios %>" >
+                <br>
+                <br>
+                <label for="">Cantidad de articulos:</label>
+                <input type="number" name="Cantidad" id="Cantidad" placeholder="Cantidad" value="<%= objeto.Cantidad %>">
+                <br>
+                <br>                
+                <a href="/registro">Regresar</a>
+                <button type="submit" id="Registro">Actualizar</button>
+            </form>
+        </div>
+    </body>
+</html> 

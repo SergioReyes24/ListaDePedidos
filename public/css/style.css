@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    text-align: center;
+}
+
+body {
+    background-color: #be6225;
+}
+
+.contenedor {   /*Contenedor grid del cuerpo principal que contiene el formulario y el resumen*/
+    display: grid;
+    gap: 1vw;
+    grid-template-areas: 
+    "Form"
+    "Resumen";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+}
+
+form {
+    grid-area: Form;
+    background: radial-gradient(#fdad7f, #ee8565);
+    padding: 1%;
+    margin: .5% 25%;
+    border-radius: 1vw 2vw;
+    box-shadow: .5vw .5vw #ce4201;
+    font-size: 1.5vw;
+}
+
+select {
+    border-radius: 2vw;
+    background-color: #dd8055;
+    color: black;
+    border-color: #fd4800;
+    padding: .2vw;
+    font-size: 1vw;
+}
+
+select:hover{
+    background-color: rgb(251, 156, 127);
+}
+
+input {
+    border-radius: 2vw;
+    color: black;
+    border-color: #fd4800;
+    padding: .2vw;
+    font-size: 1vw;
+}
+
+input:focus {
+    background-color: rgb(255, 194, 175);
+}
+
+#Resumen {  /* Contenedor de tipo grid del resumen que divide la zona del título, los listados de productos, sus cantidades y precios así como el del total */
+    grid-area: Resumen;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "Titulo Titulo"
+    "ProductoFinal ProductoFinal"
+    "TotalFinal TotalFinal";
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+p {
+    font-size: 1.5vw;
+}
+
+#Titulo {
+    grid-area: Titulo;
+    background-color: #ff9d5c;
+    border-radius: 1vw;
+    text-shadow: .2vw .2vw .3vw #ffd883;
+    font-family: 'Lilita One', cursive;
+    color: #e44303;
+    margin: 1vw 10vw;
+    box-shadow: .5vw 1vw 1vw .3vw #000000;
+}
+
+#ProductoFinal {    /* Contenedor de tipo grid que contiene las 3 areas de la lista de productos, sus precios y cantidades*/
+    grid-area: ProductoFinal;
+    background-color: #f17929;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "Area1 Area2 Area3";
+    border-radius: 1vw;
+    margin: -1vw 8vw;
+    box-shadow: .5vw 1vw 1vw .3vw #000000;
+
+}
+#Area1 {
+    grid-area: Area1;
+}
+
+#Area2 {
+    grid-area: Area2;
+}
+
+#Area3 {
+    grid-area: Area3;
+}
+
+#TotalFinal {
+    grid-area: TotalFinal;
+    background-color: #ff6005;
+    border-radius: 1vw;
+    margin: 1vw 6vw;
+    box-shadow: .5vw .5vw 1vw .3vw #000000;
+}
+
+button {
+    border-radius: 2vw;
+    cursor: pointer;
+    padding: .3vw 2vw;
+    background-color: #ffad86;
+    border-color: #ce4201;
+    transition: 0,5s;
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #ce4201;
+    border-color: #000000;
+    transform: scale(1.1);
+    color: white;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    border-radius: 2vw;
+    cursor: pointer;
+    padding: .3vw 2vw;
+    background-color: #ffad86;
+    transition: 0,5s;
+    font-size: 1.1vw;
+    text-decoration: none;
+    margin: 0% 1%;
+}
+
+a:hover {
+    background-color: #ce4201;
+    border-color: #e68686;
+    border-radius: 2vw;
+    transform: scale(1.1);
+    color: white;
+}
+
+.SegundoContenedor {
+    display: grid;
+    gap: 1vw;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "productos productos productos productos";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+}
+
+.Registro {
+    grid-area: titulo;
+    font-size: 2.3vw;
+    background-color: #ff9d5c;
+    text-shadow: .2vw .2vw .3vw #ffd883;
+    font-family: 'Lilita One', cursive;
+    color: #e44303;
+    margin: 1vw 30vw;
+    border-radius: 1vw;
+}
+
+.Productos {
+    border-color: #ce4201;
+    border-radius: 1vw;
+    border-style: solid;
+    padding: .2%;
+    margin: 1% 3%;
+    font-size: 1.2vw;
+    background-color: #ffad86;
+}
+
+.p {
+    font-size: 1.3vw;
+    padding: 2% 10%;
+    margin: 1% 1%;
+}
+
+
+.Borrar {
+    color: white;
+    cursor: pointer;
+    padding: .3vw 2.8vw;
+    background-color: #ee4848;
+    transition: 0,5s;
+    font-size: 1.1vw;
+    text-decoration: none;
+    margin: 5% 5%;
+}
+
+.Borrar:hover {
+    background-color: #e90000;
+    border-color: #e68686;
+    border-radius: 2vw;
+    transform: scale(1.2);
+    color: white;
+}
+
+.Editar {
+    color: white;
+    cursor: pointer;
+    padding: .3vw 3.5vw;
+    background-color: #ee9348;
+    transition: 0,5s;
+    font-size: 1.1vw;
+    text-decoration: none;
+    margin: 5% 10%;
+}
+
+.Editar:hover {
+    background-color: #e96900;
+    border-color: #e68686;
+    border-radius: 2vw;
+    transform: scale(1.2);
+    color: white;
+}
+
+#form {
+    background: none;
+    box-shadow: none;
+}
+
+.Regresar {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    border-radius: 2vw;
+    cursor: pointer;
+    padding: .3vw 2vw;
+    background-color: #ffad86;
+    transition: 0,5s;
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+.Regresar:hover {
+    background-color: #ce4201;
+    border-color: #e68686;
+    border-radius: 2vw;
+    transform: scale(1.1);
+    color: white;
+}
+
+.contenedor3 {
+    display: grid;
+    gap: 1vw;
+    grid-template-areas: 
+    "Form";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+}
+
+.form {
+    grid-area: Form;
+    margin: 12% 30%;
+    padding: 5% 5%;
+}
